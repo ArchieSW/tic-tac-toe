@@ -1,0 +1,85 @@
+:root {
+    --font-color: #000000;
+    --bg-color: #FFFFFF;
+    --x-color: #FF6B6B;
+    --o-color: #B0E0E6;
+    --board-color: #E6E6FA;
+    --message-color: #000000;
+    --game-width: 1000px;
+    --font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--bg-color);
+    margin: 2rem 0;
+    font-size: 24px;
+    line-height: 1.5;
+    padding: 0;
+    font-family: var(--font-family);
+    color: var(--font-color);
+}
+
+#game {
+    max-width: var(--game-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.score {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.row,
+.col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col {
+    cursor: pointer;
+    border: 3px solid var(--board-color);
+    margin: 5px;
+    height: 100px;
+    width: 100px;
+    line-height: 0;
+
+    border-radius: 4px;
+    font-size: 40px;
+}
+
+.col:hover {
+    border: 3px solid #4d4de4;
+}
+
+.x {
+    color: var(--x-color);
+}
+
+.o {
+    color: var(--o-color);
+}
+
+.message {
+    margin: 2rem 0;
+    text-align: center;
+    color: var(--message-color);
+}
+
+/* Styles for replay button */
+.replay {
+    margin: 0.4rem auto;
+    padding: 0.5rem 1rem;
+    background: var(--board-color);
+    border: 2px solid var(--board-color);
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--font-color);
+    transition: all 0.3s ease;
+}
